@@ -1,8 +1,29 @@
+/* ייבוא פונט מ-Google Fonts לדוגמה */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+.header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 10;
+    padding: 5px 15px; /* הפחתת ריווח פנימי */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    height: 90px; /* גובה כולל */
+    align-items: center; /* למרכז את התוכן אנכית */
+}
+
+.logo {
+    max-height: 70px; /* גובה מקסימלי ללוגו */
+    height: auto; /* שמירה על יחס הגובה-רוחב */
+    width: auto; /* לשמור על יחס הרוחב */
+}
+
 /* Reset כללי */
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     background-color: #f9f9f9;
     color: #333;
@@ -16,19 +37,13 @@ body, html {
 .background {
     position: relative;
     min-height: 100vh;
-    overflow: hidden;
-    background-color: #f9f9f9;
-}
+    display: flex; /* מבנה גמיש */
+    flex-direction: column; /* אלמנטים מסודרים אנכית */
+    justify-content: center; /* מרכז את התוכן אנכית */
+    align-items: center; /* מרכז את התוכן אופקית */
 
-/* הפס הסגול העגלגל */
-.purple-wave {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 400px; /* כוונן גובה לפי הצורך */
-    background: url("assets/purple-wave.svg") no-repeat center bottom;
-    background-size: cover;
-    z-index: -1;
+    background: url("purple-wave.svg") no-repeat center bottom;
+    background-size: cover; 
 }
 
 /* Main */
@@ -61,29 +76,32 @@ main {
     flex: 1;
     min-width: 300px;
     max-width: 600px;
-    font-size: 1.2em;
 }
 
+/* כותרת ראשית גדולה יותר */
 .text h1 {
-    font-size: 2.5em;
+    font-weight: 600;    /* מעט יותר מודגש */
+    font-size: 3em;      /* הכפלה של הגודל המקורי ~2.5 => 3 */
     margin-bottom: 20px;
     line-height: 1.2;
     color: #333;
 }
 
+/* פסקאות ראשיות - מעט גדולות יותר */
 .text p {
-    font-size: 1.3em;
+    font-size: 1.5em;
     margin-bottom: 20px;
     color: #666;
 }
 
+/* רשימות (נקודות) */
 .text ul {
     list-style: none;
     padding: 0;
 }
 
 .text ul li {
-    font-size: 1.1em;
+    font-size: 1.3em; /* מעט גדול יותר */
     margin: 10px 0;
     color: #4caf50;
 }
@@ -108,12 +126,13 @@ main {
 
 /* Form Section */
 .form {
-    background-color: #fff;
-    padding: 30px 20px;
+    padding: 20px 15px; /* הפחתת ריווח פנימי */
+    position: relative;
+    margin: 0 auto;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: 20px;
+    top: -80px;
 }
 
 .form h2 {
