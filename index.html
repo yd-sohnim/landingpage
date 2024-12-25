@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+    <header>
+        <div class="logo">sohnim.io</div>
+    </header>
     <main>
         <section class="hero">
             <div class="text">
@@ -26,10 +29,10 @@
         <section class="form">
             <h2>רוצים לשמוע עוד?</h2>
             <p>השאירו פרטים ונחזור אליכם בהקדם</p>
-            <form>
-                <input type="text" placeholder="שם" required>
-                <input type="email" placeholder="אימייל" required>
-                <input type="tel" placeholder="טלפון" required>
+            <form action="https://formspree.io/f/xeooejpb" method="POST">
+                <input type="text" name="name" placeholder="שם" required>
+                <input type="email" name="email" placeholder="אימייל" required>
+                <input type="tel" name="phone" placeholder="טלפון" required>
                 <button type="submit">שליחה</button>
             </form>
         </section>
